@@ -399,7 +399,6 @@ GameObject:
   - component: {fileID: 419039704}
   - component: {fileID: 419039710}
   - component: {fileID: 419039709}
-  - component: {fileID: 419039711}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -420,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 3
+  speed: 2
 --- !u!114 &419039705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,15 +572,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.24039651, y: -0.117496}
-      - {x: 0.23330472, y: -0.09803773}
-      - {x: 0.19752055, y: -0.06840223}
-      - {x: 0.19656682, y: 0.036549933}
-      - {x: 0.268239, y: 0.051139496}
-      - {x: 0.2577394, y: 0.18060708}
-      - {x: 0.16566287, y: 0.17382891}
-      - {x: 0.16566287, y: 0.1738289}
-      - {x: 0.14771277, y: 0.09649519}
+    - - {x: 0.26715612, y: 0.1354067}
+      - {x: 0.12224975, y: 0.113844454}
       - {x: -0.19187514, y: -0.08871803}
       - {x: -0.265, y: -0.145}
       - {x: -0.265, y: -0.185}
@@ -613,61 +605,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!60 &419039711
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419039703}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53, y: 0.37}
-    newSize: {x: 0.53, y: 0.37}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.19017483, y: -0.06555544}
-      - {x: 0.18206193, y: 0.03649363}
-      - {x: 0.12365839, y: 0.07481347}
-      - {x: -0.1648835, y: -0.09226735}
-      - {x: -0.25931555, y: -0.15312074}
-      - {x: -0.25850365, y: -0.18094036}
-      - {x: 0.2479469, y: -0.17444345}
-  m_UseDelaunayMesh: 0
+  m_Constraints: 0
 --- !u!1 &422777839
 GameObject:
   m_ObjectHideFlags: 0

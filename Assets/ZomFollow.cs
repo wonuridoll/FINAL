@@ -3,7 +3,7 @@ using UnityEngine;
 public class ZomFollow : MonoBehaviour
 {
     public Transform target;
-    public float speed = 3f;
+    public float speed = 2f;
 
     void Update()
     {
@@ -20,24 +20,7 @@ public class ZomFollow : MonoBehaviour
         // If the target is assigned, follow it
         if (target != null)
         {
-            // Move toward the player
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-
-            // Flip sprite based on direction
-            float direction = target.position.x - transform.position.x;
-            Vector3 localScale = transform.localScale;
-
-            if (direction < 0)
-            {
-                localScale.x = Mathf.Abs(localScale.x) * -1; // face left
-            }
-            else if (direction > 0)
-            {
-                localScale.x = Mathf.Abs(localScale.x); // face right
-            }
-
-            transform.localScale = localScale;
-
         }
     }
 }
