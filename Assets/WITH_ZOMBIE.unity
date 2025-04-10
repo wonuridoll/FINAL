@@ -152,6 +152,7 @@ MonoBehaviour:
   mapBoundary: {fileID: 815542444}
   mapSpawnPoint: {fileID: 1978103606}
   direction: 1
+  zombie: {fileID: 0}
 --- !u!61 &9739490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1535,6 +1536,7 @@ MonoBehaviour:
   mapBoundary: {fileID: 1792891426}
   mapSpawnPoint: {fileID: 1135099885}
   direction: 0
+  zombie: {fileID: 0}
 --- !u!1 &790039945
 GameObject:
   m_ObjectHideFlags: 0
