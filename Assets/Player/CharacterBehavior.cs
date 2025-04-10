@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class CharacterBehavior : MonoBehaviour
 {
-    public float moveSpeed = 3f;
+    public float normalSpeed = 3f;
+    public float sprintSpeed = 5f;
     public Rigidbody2D rb;
     public Animator anim;
 
@@ -41,6 +42,7 @@ public class CharacterBehavior : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : normalSpeed;
+        rb.MovePosition(rb.position + movement * currentSpeed * Time.fixedDeltaTime);
     }
 }

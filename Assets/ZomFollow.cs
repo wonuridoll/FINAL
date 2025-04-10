@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class followscript : MonoBehaviour
+public class ZomFollow : MonoBehaviour
 {
     public Transform target;
-    public float speed;
+    public float speed = 2f;
 
     void Update()
     {
