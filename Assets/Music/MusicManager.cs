@@ -6,6 +6,7 @@ public class MusicManager : MonoBehaviour
     public AudioSource musicSource;
     public AudioClip mainMusic;
     public AudioClip gameMusic;
+    public AudioClip houseMusic;
 
     private void Awake()
     {
@@ -27,7 +28,12 @@ public class MusicManager : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == "MainGame" && musicSource.clip != gameMusic)
+        if (SceneManager.GetActiveScene().name == "2ndMap" && musicSource.clip != houseMusic)
+        {
+            musicSource.clip = houseMusic;
+            musicSource.Play();
+        }
+        else if (SceneManager.GetActiveScene().name == "MainGame" && musicSource.clip != gameMusic)
         {
             musicSource.clip = gameMusic;
             musicSource.Play();
