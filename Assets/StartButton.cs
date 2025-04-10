@@ -1,10 +1,11 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
     void OnMouseDown()
     {
-        SceneManager.LoadSceneAsync("CharacterSelection");
+        // This runs when the GameObject is clicked
+        Debug.Log("Clicked on " + gameObject.name);
+        // Add your event here
     }
 }
