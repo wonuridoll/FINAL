@@ -1,27 +1,15 @@
 using UnityEngine;
 
 public class DestroyOnCollision : MonoBehaviour
-
 {
-
-    // This method is called when the collider attached to this GameObject collides with another collider.
-
-    private void OnCollisionEnter2D(Collision2D collision)
-
+    // This method is called when the collider attached to this GameObject enters a trigger collider.
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-
-        // Check if the collision is with the specific object you want to destroy
-
-        if (collision.gameObject.CompareTag("Player")) // Replace "Collider" with the tag you want to check
-
+        // Check if the trigger is colliding with the player
+        if (collider.gameObject.CompareTag("Player")) // Replace "Player" with the tag of the object you want to check
         {
-
             // Destroy this GameObject
-
             Destroy(gameObject);
-
         }
-
     }
-
 }

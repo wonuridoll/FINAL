@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ItemTrigger : MonoBehaviour
+public class ZomSpawner : MonoBehaviour
 {
     public GameObject character; // Reference to the character GameObject
     public Transform spawnPoint; // Reference to the spawn point

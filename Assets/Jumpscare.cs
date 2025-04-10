@@ -10,6 +10,7 @@ public class Jumpscare : MonoBehaviour
 
     private bool hasTriggered = false;
     private GameObject player;
+    private GameObject zombie;
 
     private void Start()
     {
@@ -34,11 +35,22 @@ public class Jumpscare : MonoBehaviour
             yield return null;
         }
 
-        // Play the video first (so the player disappears immediately after)
+        // Wait until the Zombie is spawned (assuming it's also tagged or identifiable)
+        while (zombie == null)
+        {
+            zombie = GameObject.Find("Zombie"); // or use "Zombie" if the zombie is named specifically
+            yield return null;
+        }
+
+        // Play the video first (so the player and zombie disappear immediately after)
         videoPlayer.Play();
 
-        // Hide the player right after video starts
+        // Hide the player and the zombie right after the video starts
         player.SetActive(false);
+        if (zombie != null)
+        {
+            zombie.SetActive(false);
+        }
 
         // Listen for video end to trigger scene change
         videoPlayer.loopPointReached += OnVideoFinished;
